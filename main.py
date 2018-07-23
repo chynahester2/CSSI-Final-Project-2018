@@ -1,6 +1,8 @@
 import webapp2
 import jinja2
 import os
+from google.appengine.api import users
+from models import CssiUser
 
 the_jinja_environment = jinja2.Environment(
     loader = jinja2.FileSystemLoader(os.path.dirname(__file__)),
@@ -25,6 +27,6 @@ class EventsPage(webapp2.RequestHandler):
 
 app = webapp2.WSGIApplication([
     ('/', WelcomePage),
-    ('/discount', DiscountPage),
+    ('/discounts', DiscountPage),
     ('/events', EventsPage)
 ], debug=True)
