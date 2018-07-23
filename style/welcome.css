@@ -1,63 +1,61 @@
 body {
   background-color: lightgrey;
 }
- div .buttons {
-    background-color: #4CAF50; /* Green */
+
+div .hexagon {
+    background-color: gray; /* Green */
     border: none;
     color: white;
-    padding: 15px 32px;
+    padding: 15px 15px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
 }
+#discount-button {
+  top: 100px;
+  left:100px;
+}
+#localevents-button {
+  top: 200px;
+  left: 100px;
+
+}
+#books-button {
+ top: 100px;
+ left: 100px;
+}
+#stressed-button {
+  top:200px;
+  left:100px;
+}
 
 .hexagon {
-  position: relative;
-  width: 300px;
-  height: 173.21px;
-  background-color: #ccbb1c;
-  margin: 86.60px 0;
-  box-shadow: 0 0 20px rgba(0,0,0,0.6);
-  border-left: solid 5px #333333;
-  border-right: solid 5px #333333;
+	width: 100px;
+	height: 55px;
+	background: green;
+	position: relative;
+  align-items: center;
 }
-
-.hexagon:before,
-.hexagon:after {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  width: 212.13px;
-  height: 212.13px;
-  -webkit-transform: scaleY(0.5774) rotate(-45deg);
-  -ms-transform: scaleY(0.5774) rotate(-45deg);
-  transform: scaleY(0.5774) rotate(-45deg);
-  background-color: inherit;
-  left: 38.9340px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.6);
-}
-
 .hexagon:before {
-  top: -106.0660px;
-  border-top: solid 7.0711px #333333;
-  border-right: solid 7.0711px #333333;
+	content: "";
+	position: absolute;
+	top: -25px;
+	left: 0;
+	width: 0;
+	height: 0;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-bottom: 25px solid gray;
 }
-
 .hexagon:after {
-  bottom: -106.0660px;
-  border-bottom: solid 7.0711px #333333;
-  border-left: solid 7.0711px #333333;
+	content: "";
+	position: absolute;
+	bottom: -25px;
+	left: 0;
+	width: 0;
+	height: 0;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-top: 25px solid gray;
 }
-
-/*cover up extra shadows*/
-/* .hexagon span {
-  display: block;
-  position: absolute;
-  top:2.8867513459481287px;
-  left: 0;
-  width:290px;
-  height:167.4316px;
-  z-index: 2;
-  background: inherit;
-} */
