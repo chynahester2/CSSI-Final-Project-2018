@@ -10,10 +10,24 @@ the_jinja_environment = jinja2.Environment(
     autoescape = True
 )
 
+def logged_in():
+    user = users.get_current_user()
+    status = ""
+    if user:
+        status = "Sign Out"
+    else:
+        status = "Sign In"
+    return status
+
 class WelcomePage(webapp2.RequestHandler):
     def get(self):
+        status = logged_in()
+        link = users.create_logout_url('/login')
+        if status == "Sign In":
+            link = '/login'
         welcome_template = the_jinja_environment.get_template('templates/welcome.html')
-        self.response.write(welcome_template.render())
+        temp_dict = {'status': status, 'link': link}
+        self.response.write(welcome_template.render(temp_dict))
 
 class DiscountPage(webapp2.RequestHandler):
     def get(self):
@@ -54,7 +68,7 @@ class LoginPage(webapp2.RequestHandler):
                 Please log in to our site! <br>
                 <a href="%s">Sign in</a><br><br>
                 Or sign up now!<br><a href="%s">Sign Up</a>'''
-                % (users.create_login_url('/login'), users.create_login_url('login')))
+                % (users.create_login_url('/login'), users.create_login_url('/login')))
         else:
             email_address = user.nickname()
             cssi_user = User.get_by_id(user.user_id())
@@ -91,13 +105,21 @@ class LoginPage(webapp2.RequestHandler):
         cssi_user.put()
         self.response.write('Thanks for signing up, %s %s! You go to %s' % (cssi_user.first_name, cssi_user.last_name, cssi_user.college))
 
+class SpecificEventPage(webapp2.RequestHandler):
+    def get(self):
+        event_template = the_jinja_environment.get_template('templates/event.html')
+
 app = webapp2.WSGIApplication([
     ('/', WelcomePage),
     ('/discounts', DiscountPage),
     ('/events', EventsPage),
     ('/login', LoginPage),
+<<<<<<< HEAD
     ('/museums', MuseumsPage),
     ('/technology',TechnologyPage),
     ('/shopping', ShoppingPage),
     ('/dorm', DormPage),
+=======
+    ('/event', SpecificEventPage)
+>>>>>>> 0b617c7fffc7cff5700e8315ab942282ba33f11f
 ], debug=True)
