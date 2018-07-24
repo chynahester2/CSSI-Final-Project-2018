@@ -3,7 +3,7 @@ h1 {
 }
 
 body {
-  background: linear-gradient(lightblue, aqua) fixed;
+  background: linear-gradient(lightgray, lightblue) fixed;
   overflow-x: hidden;
 }
 
