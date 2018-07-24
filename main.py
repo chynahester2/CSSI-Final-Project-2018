@@ -24,6 +24,26 @@ class EventsPage(webapp2.RequestHandler):
     def get(self):
         events_template = the_jinja_environment.get_template('templates/events.html')
         self.response.write(events_template.render())
+class MuseumsPage(webapp2.RequestHandler):
+    def get(self):
+        museums_template = the_jinja_environment.get_template('templates/museums.html')
+        self.response.write(museums_template.render())
+
+class TechnologyPage(webapp2.RequestHandler):
+    def get(self):
+        technology_template = the_jinja_environment.get_template('templates/technology.html')
+        self.response.write(technology_template.render())
+
+class ShoppingPage(webapp2.RequestHandler):
+    def get(self):
+        shopping_template = the_jinja_environment.get_template('templates/shopping.html')
+        self.response.write(shopping_template.render())
+
+class DormPage(webapp2.RequestHandler):
+    def get(self):
+        dorm_template = the_jinja_environment.get_template('templates/dorm.html')
+        self.response.write(dorm_template.render())
+
 
 class LoginPage(webapp2.RequestHandler):
     def get(self):
@@ -75,5 +95,9 @@ app = webapp2.WSGIApplication([
     ('/', WelcomePage),
     ('/discounts', DiscountPage),
     ('/events', EventsPage),
-    ('/login', LoginPage)
+    ('/login', LoginPage),
+    ('/museums', MuseumsPage),
+    ('/technology',TechnologyPage),
+    ('/shopping', ShoppingPage),
+    ('/dorm', DormPage),
 ], debug=True)
