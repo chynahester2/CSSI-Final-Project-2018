@@ -23,7 +23,10 @@ img {
 
 @keyframes bannermove {
   0% {margin-left: 0px}
-  50% {margin-left: -1200px}
+  5% {margin-left: 0px}
+  45% {margin-left: -1175px}
+  55% {margin-left: -1175px}
+  95% {margin-left: 0px}
   100% {margin-left: 0px}
 }
 
@@ -37,4 +40,5 @@ img {
   transform: scale(1.03);
   cursor: pointer;
   box-shadow: 0px 3px 5px rgba(0,0,0,0.2);
+  animation-play-state: paused;
 }
