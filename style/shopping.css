@@ -27,29 +27,22 @@ div .buttonPanel {
     margin: 0 auto;
 }
 #clothes-button {
-  top: 100px;
+  top: 10px;
   left:100px;
 }
 #shoes-button {
-  top: 100px;
+  top: 10px;
   left: 100px;
   align-items: center;
 }
-#purses-button {
- top: 100px;
- left: 100px;
-}
-#dorm-button {
-  top:100px;
-  left:100px;
-}
+
 .hexagon {
 font-family: 'Abril Fatface', cursive;
 font-size: 30px;
 }
 .hexagon {
 	width: 300px;
-	height: 150px;
+	height: 100px;
   background-color: gray;
 	position: relative;
   align-items: center;
@@ -81,7 +74,7 @@ font-size: 30px;
 .header {
   overflow: hidden;
   background-color: #f1f1f1;
-  padding: 20px 100px;
+  padding: 10px 50px;
 }
 
 /* Style the header links */
