@@ -66,10 +66,9 @@ img {
 body {
   background-color: lightblue;
   /* margin:0;
-  padding:0;
+  padding:0; */
   /* background:linear-gradient(rgba(255, 255, 255, .2), rgba(255, 255, 255, .2)), url("http://dailycaring.com/wp-content/uploads/2015/12/discountoffer1200x630.jpg") no-repeat center center fixed; */
   background-size: cover;
-  opacity: .7; */
   font-family: Verdana, sans-serif;
 }
 .logo {
@@ -110,16 +109,15 @@ div .buttonPanel {
   left:100px;
 }
 .hexagon {
-font-family: 'Abril Fatface', cursive;
-font-size: 30px;
-}
-.hexagon {
+  font-family: 'Abril Fatface', cursive;
+  font-size: 30px;
 	width: 300px;
 	height: 100px;
   background-color: gray;
 	position: relative;
   align-items: center;
   display:inline-block;
+  opacity: 0.7;
 }
 .hexagon:before {
 	content: "";
