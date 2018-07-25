@@ -26,16 +26,16 @@ div .buttonPanel {
     width: 50%;
     margin: 0 auto;
 }
-#museums-button {
+#clothes-button {
   top: 100px;
   left:100px;
 }
-#movies-button {
+#shoes-button {
   top: 100px;
   left: 100px;
   align-items: center;
 }
-#technology-button {
+#purses-button {
  top: 100px;
  left: 100px;
 }

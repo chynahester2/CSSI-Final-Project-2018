@@ -1,8 +1,8 @@
-body {
+ody {
   background-color: lightblue;
   margin:0;
   padding:0;
-  background:linear-gradient(rgba(255, 255, 255, .2), rgba(255, 255, 255, .2)), url("http://dailycaring.com/wp-content/uploads/2015/12/discountoffer1200x630.jpg") no-repeat center center fixed;
+  background:linear-gradient(rgba(255, 255, 255, .2), rgba(255, 255, 255, .2)), url("https://www.straighterline.com/wp/wp-content/uploads/2015/07/blog_feature_IT_Careers_072015.jpg") no-repeat center center fixed;
   background-size: cover;
   opacity: .7;
 }
@@ -26,23 +26,23 @@ div .buttonPanel {
     width: 50%;
     margin: 0 auto;
 }
-#museums-button {
+#phones-button {
   top: 100px;
   left:100px;
 }
-#movies-button {
+#music-button {
   top: 100px;
   left: 100px;
   align-items: center;
 }
-#technology-button {
+#laptop-button {
  top: 100px;
  left: 100px;
 }
-#dorm-button {
+/* #dorm-button {
   top:100px;
-  left:100px;
-}
+  left:100px; */
+/* } */
 .hexagon {
 font-family: 'Abril Fatface', cursive;
 font-size: 30px;
