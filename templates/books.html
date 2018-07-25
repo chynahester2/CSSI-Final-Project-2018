@@ -11,14 +11,32 @@
   <!-- <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700" rel="stylesheet"-->
 </head>
 <body>
+  <!-- <div class="welcome-header">
+    <h2>{{home_message}}</h2>
+    <a href="{{logout_url}}">Sign out</a>
+  </div> -->
+  <!-- <div class="buttons">
+    <button id="discount-button" class = "buttons">Discount</button>
+    <button id="localevents-button"class = "buttons">Local Events</button>
+    <button id="books-button"class = "buttons">Books</button>
+    <button id="stressed-button"class = "buttons">Stressed</button>
+  </div> -->
 
   <div class="header">
-    <a href="/" class="logo">College Knowledge</a>
+    <a href="/" class="logo">The College Bored</a>
     <div class="header-right">
       <a class="active" href="/login">Sign In</a>
       <a href="#about">About</a>
     </div>
   </div>
 
+<div id = "buttonPanel">
+  <a href="/discounts"><button id="discount-button" class="hexagon">Discounts</button></a>
+  <a href = "/events"><button id="localevents-button"class = "hexagon">Events</button></a>
+  <a href = "/books"><button id="books-button"class = "hexagon">Books</button></a>
+  <button id="stressed-button"class = "hexagon">Stressed?</button>
+</div>
+
+  <!-- <script src="../scripts/account_home.js"></script> -->
 </body>
 </html>

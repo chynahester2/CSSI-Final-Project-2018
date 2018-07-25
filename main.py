@@ -84,15 +84,22 @@ class LoginPage(webapp2.RequestHandler):
             id=user.user_id())
         cssi_user.put()
         self.response.write('Thanks for signing up, %s %s! You go to %s' % (cssi_user.first_name, cssi_user.last_name, cssi_user.college))
+class BooksPage(webapp2.RequestHandler):
+    def get(self):
+        books_template = the_jinja_environment.get_template('templates/books.html')
+        self.response.write(books_template.render())
 
 class SpecificEventPage(webapp2.RequestHandler):
     def get(self):
         event_template = the_jinja_environment.get_template('templates/event.html')
+
+
 
 app = webapp2.WSGIApplication([
     ('/', WelcomePage),
     ('/discounts', DiscountPage),
     ('/events', EventsPage),
     ('/login', LoginPage),
+    ('/books', BooksPage),
     ('/event', SpecificEventPage)
 ], debug=True)
