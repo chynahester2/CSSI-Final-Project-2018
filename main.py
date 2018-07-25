@@ -134,7 +134,7 @@ class BooksPage(webapp2.RequestHandler):
 
 class StressedPage(webapp2.RequestHandler):
     def get(self):
-        stressed_template = the_jinja_environment.get_template('tmplates/stressed.html')
+        stressed_template = the_jinja_environment.get_template('templates/stressed.html')
         self.response.write(stressed_template.render())
 
 class MuseumsPage(webapp2.RequestHandler):
