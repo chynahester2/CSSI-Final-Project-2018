@@ -169,14 +169,7 @@ class SpecificEventPage(webapp2.RequestHandler):
 class MusicPage(webapp2.RequestHandler):
     def get(self):
         music_template = the_jinja_environment.get_template('templates/music.html')
-        self.response.write(music_template.render())
 
-<<<<<<< HEAD
-class MeditationPage(webapp2.RequestHandler):
-    def get(self):
-        meditation_template = the_jinja_environment.get_template('templates/meditation.html')
-        self.response.write(meditation_template.render())
-=======
 class SportPage(webapp2.RequestHandler):
     def get(self):
         user = users.get_current_user()
@@ -275,7 +268,6 @@ class AttractionsPage(webapp2.RequestHandler):
         attractions_template= the_jinja_environment.get_template('templates/attractions.html')
         self.response.write(attractions_template.render(temp_dict))
 
->>>>>>> 2e88d37d759ef260b19e89cccc1dce95641a1758
 app = webapp2.WSGIApplication([
     ('/', WelcomePage),
     ('/discounts', DiscountPage),
@@ -294,14 +286,11 @@ app = webapp2.WSGIApplication([
     ('/laptop',LaptopPage),
 # <<<<<<< HEAD
 # =======
-    ('/music', MusicPage),
+    ('/music'MusicPage),
 <<<<<<< HEAD
 # >>>>>>> 046eb23aab787640a7284b67e11a1a317fb1fe99
 =======
     ('/music', MusicPage),
-<<<<<<< HEAD
-    ('/meditation', MeditationPage),
-=======
     ('/events/sport', SportPage),
     ('/events/comedy', ComedyPage),
     ('/events/food', FoodPage),
