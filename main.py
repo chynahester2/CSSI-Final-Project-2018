@@ -36,8 +36,51 @@ class DiscountPage(webapp2.RequestHandler):
 
 class EventsPage(webapp2.RequestHandler):
     def get(self):
+        user = users.get_current_user()
+        status = logged_in()
+        link = users.create_logout_url('/login')
+        college = ""
+        if status == "Sign In":
+            link = '/login'
+        else:
+            college = User.get_by_id(user.user_id()).college
         events_template = the_jinja_environment.get_template('templates/events.html')
-        self.response.write(events_template.render())
+        temp_dict = {'status': status, 'link': link, 'college': college}
+        self.response.write(events_template.render(temp_dict))
+        if user:
+            self.response.write('''This is your college %s'''%(college))
+            self.response.write('''
+                <h3>%s</h3>
+                <p>This is the events page for %s</p>'''
+                % (college, college))
+        else:
+            self.response.write('''
+                <div class="tab">
+                    <button class="tablinks" onclick="openCollege(event, 'Georgia Tech')">Georgia Tech</button>
+                    <button class="tablinks" onclick="openCollege(event, 'Georgia State University')">Georgia State University</button>
+                    <button class="tablinks" onclick="openCollege(event, 'Emory University')">Emory University</button>
+                    <button class="tablinks" onclick="openCollege(event, 'Spelman College')">Spelman College</button>
+                </div>
+
+                <div id="Georgia Tech" class="tabcontent" style="display: none;">
+                    <h3>Georgia Tech</h3>
+                    <p>This is the events page for Georgia Tech</p>
+                </div>
+
+                <div id="Georgia State University" class="tabcontent" style="display: none;">
+                    <h3>Georgia State University</h3>
+                    <p>This is the events page for Georgia State University</p>
+                </div>
+
+                <div id="Emory University" class="tabcontent" style="display: none;">
+                    <h3>Emory University</h3>
+                    <p>This is the events page for Emory University</p>
+                </div>
+
+                <div id="Spelman College" class="tabcontent" style="display: none;">
+                    <h3>Spelman College</h3>
+                    <p>This is the events page for Spelman College</p>
+                </div>''')
 
 class LoginPage(webapp2.RequestHandler):
     def get(self):
@@ -85,14 +128,9 @@ class LoginPage(webapp2.RequestHandler):
         cssi_user.put()
         self.response.write('Thanks for signing up, %s %s! You go to %s' % (cssi_user.first_name, cssi_user.last_name, cssi_user.college))
 
-class SpecificEventPage(webapp2.RequestHandler):
-    def get(self):
-        event_template = the_jinja_environment.get_template('templates/event.html')
-
 app = webapp2.WSGIApplication([
     ('/', WelcomePage),
     ('/discounts', DiscountPage),
     ('/events', EventsPage),
-    ('/login', LoginPage),
-    ('/event', SpecificEventPage)
+    ('/login', LoginPage)
 ], debug=True)
