@@ -129,43 +129,115 @@ class LoginPage(webapp2.RequestHandler):
         self.response.write('Thanks for signing up, %s %s! You go to %s' % (cssi_user.first_name, cssi_user.last_name, cssi_user.college))
 class BooksPage(webapp2.RequestHandler):
     def get(self):
+        user = users.get_current_user()
+        status = logged_in()
+        link = users.create_logout_url('/login')
+        college = ""
+        if status == "Sign In":
+            link = '/login'
+        else:
+            college = User.get_by_id(user.user_id()).college
+        temp_dict = {'status': status, 'link': link, 'college': college}
         books_template = the_jinja_environment.get_template('templates/books.html')
-        self.response.write(books_template.render())
+        self.response.write(books_template.render(temp_dict))
 
 class StressedPage(webapp2.RequestHandler):
     def get(self):
+        user = users.get_current_user()
+        status = logged_in()
+        link = users.create_logout_url('/login')
+        college = ""
+        if status == "Sign In":
+            link = '/login'
+        else:
+            college = User.get_by_id(user.user_id()).college
+        temp_dict = {'status': status, 'link': link, 'college': college}
         stressed_template = the_jinja_environment.get_template('templates/stressed.html')
-        self.response.write(stressed_template.render())
+        self.response.write(stressed_template.render(temp_dict))
 
 class MuseumsPage(webapp2.RequestHandler):
     def get(self):
+        user = users.get_current_user()
+        status = logged_in()
+        link = users.create_logout_url('/login')
+        college = ""
+        if status == "Sign In":
+            link = '/login'
+        else:
+            college = User.get_by_id(user.user_id()).college
+        temp_dict = {'status': status, 'link': link, 'college': college}
         museums_template = the_jinja_environment.get_template('templates/museums.html')
-        self.response.write(museums_template.render())
+        self.response.write(museums_template.render(temp_dict))
 
 class TechnologyPage(webapp2.RequestHandler):
     def get(self):
+        user = users.get_current_user()
+        status = logged_in()
+        link = users.create_logout_url('/login')
+        college = ""
+        if status == "Sign In":
+            link = '/login'
+        else:
+            college = User.get_by_id(user.user_id()).college
+        temp_dict = {'status': status, 'link': link, 'college': college}
         technology_template = the_jinja_environment.get_template('templates/technology.html')
-        self.response.write(technology_template.render())
+        self.response.write(technology_template.render(temtemp_dict))
 
 class ShoppingPage(webapp2.RequestHandler):
     def get(self):
+        user = users.get_current_user()
+        status = logged_in()
+        link = users.create_logout_url('/login')
+        college = ""
+        if status == "Sign In":
+            link = '/login'
+        else:
+            college = User.get_by_id(user.user_id()).college
+        temp_dict = {'status': status, 'link': link, 'college': college}
         shopping_template = the_jinja_environment.get_template('templates/shopping.html')
-        self.response.write(shopping_template.render())
+        self.response.write(shopping_template.render(temp_dict))
 
 class DormPage(webapp2.RequestHandler):
     def get(self):
+        user = users.get_current_user()
+        status = logged_in()
+        link = users.create_logout_url('/login')
+        college = ""
+        if status == "Sign In":
+            link = '/login'
+        else:
+            college = User.get_by_id(user.user_id()).college
+        temp_dict = {'status': status, 'link': link, 'college': college}
         dorm_template = the_jinja_environment.get_template('templates/dorm.html')
-        self.response.write(dorm_template.render())
+        self.response.write(dorm_template.render(temp_dict))
 
 class ClothesPage(webapp2.RequestHandler):
     def get(self):
+        user = users.get_current_user()
+        status = logged_in()
+        link = users.create_logout_url('/login')
+        college = ""
+        if status == "Sign In":
+            link = '/login'
+        else:
+            college = User.get_by_id(user.user_id()).college
+        temp_dict = {'status': status, 'link': link, 'college': college}
         clothes_template = the_jinja_environment.get_template('templates/clothes.html')
-        self.response.write(clothes_template.render())
+        self.response.write(clothes_template.render(temp_dict))
 
 class LaptopPage(webapp2.RequestHandler):
     def get(self):
+        user = users.get_current_user()
+        status = logged_in()
+        link = users.create_logout_url('/login')
+        college = ""
+        if status == "Sign In":
+            link = '/login'
+        else:
+            college = User.get_by_id(user.user_id()).college
+        temp_dict = {'status': status, 'link': link, 'college': college}
         laptop_template = the_jinja_environment.get_template('templates/laptop.html')
-        self.response.write(laptop_template.render())
+        self.response.write(laptop_template.render(temp_dict))
 
 class SpecificEventPage(webapp2.RequestHandler):
     def get(self):
@@ -175,14 +247,20 @@ class MusicPage(webapp2.RequestHandler):
     def get(self):
         music_template = the_jinja_environment.get_template('templates/music.html')
 
-<<<<<<< HEAD
-=======
 class MeditationPage(webapp2.RequestHandler):
     def get(self):
+        user = users.get_current_user()
+        status = logged_in()
+        link = users.create_logout_url('/login')
+        college = ""
+        if status == "Sign In":
+            link = '/login'
+        else:
+            college = User.get_by_id(user.user_id()).college
+        temp_dict = {'status': status, 'link': link, 'college': college}
         meditation_template = the_jinja_environment.get_template('templates/meditation.html')
-        self.response.write(meditation_template.render())
+        self.response.write(meditation_template.render(temtemp_dict))
 
->>>>>>> 52d91c74555cd1f51cf51dba0e9e502aa4bc8d6e
 class SportPage(webapp2.RequestHandler):
     def get(self):
         user = users.get_current_user()
@@ -294,18 +372,10 @@ app = webapp2.WSGIApplication([
     ('/dorm', DormPage),
     ('/clothes', ClothesPage),
     ('/laptop',LaptopPage),
-<<<<<<< HEAD
-# <<<<<<< HEAD
-# =======
     ('/music'MusicPage),
-<<<<<<< HEAD
-# >>>>>>> 046eb23aab787640a7284b67e11a1a317fb1fe99
-=======
     ('/music', MusicPage),
-=======
     ('/music', MusicPage),
     ('/meditation', MeditationPage),
->>>>>>> 52d91c74555cd1f51cf51dba0e9e502aa4bc8d6e
     ('/events/sport', SportPage),
     ('/events/comedy', ComedyPage),
     ('/events/food', FoodPage),
