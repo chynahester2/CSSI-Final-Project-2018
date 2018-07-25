@@ -246,6 +246,7 @@ class SpecificEventPage(webapp2.RequestHandler):
 class MusicPage(webapp2.RequestHandler):
     def get(self):
         music_template = the_jinja_environment.get_template('templates/music.html')
+        self.response.write(music_template.render())
 
 class MeditationPage(webapp2.RequestHandler):
     def get(self):
@@ -259,7 +260,7 @@ class MeditationPage(webapp2.RequestHandler):
             college = User.get_by_id(user.user_id()).college
         temp_dict = {'status': status, 'link': link, 'college': college}
         meditation_template = the_jinja_environment.get_template('templates/meditation.html')
-        self.response.write(meditation_template.render(temtemp_dict))
+        self.response.write(meditation_template.render(temp_dict))
 
 class SportPage(webapp2.RequestHandler):
     def get(self):
@@ -372,8 +373,6 @@ app = webapp2.WSGIApplication([
     ('/dorm', DormPage),
     ('/clothes', ClothesPage),
     ('/laptop',LaptopPage),
-    ('/music',MusicPage),
-    ('/music', MusicPage),
     ('/music', MusicPage),
     ('/meditation', MeditationPage),
     ('/events/sport', SportPage),
