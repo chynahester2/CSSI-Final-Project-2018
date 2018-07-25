@@ -2,9 +2,11 @@ body {
   background-color: lightblue;
   margin:0;
   padding:0;
-  background:linear-gradient(rgba(255, 255, 255, .2), rgba(255, 255, 255, .2)), url("http://dailycaring.com/wp-content/uploads/2015/12/discountoffer1200x630.jpg") no-repeat center center fixed;
+  background:linear-gradient(rgba(255, 255, 255, .2), rgba(255, 255, 255, .2)), url("https://www.panview.nl/sites/default/files/field/image/Money.jpg") no-repeat center center fixed;
   background-size: cover;
   opacity: .7;
+  margin: 0;
+  padding: 0;
 }
 .logo {
   color: gray;
@@ -13,7 +15,7 @@ body {
   font-size: 10em;
 }
 div .buttonPanel {
-    background-color: gray; /* Green */
+    background-color: lightgreen; /* Green */
     border: none;
     color: white;
     padding: 10px 15px;
@@ -50,7 +52,7 @@ font-size: 30px;
 .hexagon {
 	width: 300px;
 	height: 150px;
-  background-color: gray;
+  background-color: lightgreen;
 	position: relative;
   align-items: center;
   display:inline-block;
@@ -64,7 +66,7 @@ font-size: 30px;
 	height: 0;
 	border-left: 150px solid transparent;
 	border-right: 150px solid transparent;
-	border-bottom: 25px solid gray;
+	border-bottom: 25px solid lightgreen;
 }
 .hexagon:after {
 	content: "";
@@ -75,13 +77,14 @@ font-size: 30px;
 	height: 0;
 	border-left: 150px solid transparent;
 	border-right: 150px solid transparent;
-	border-top: 25px solid gray;
+	border-top: 25px solid lightgreen;
 }
 /* Style the header with a grey background and some padding */
 .header {
   overflow: hidden;
   background-color: #f1f1f1;
   padding: 20px 100px;
+  opacity: 0.7;
 }
 
 /* Style the header links */

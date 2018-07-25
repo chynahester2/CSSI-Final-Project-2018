@@ -131,27 +131,26 @@ class BooksPage(webapp2.RequestHandler):
     def get(self):
         books_template = the_jinja_environment.get_template('templates/books.html')
         self.response.write(books_template.render())
-
+class StressedPage(webapp2.RequestHandler):
+    def get(self):
+        stressed_template = the_jinja_environment.get_template('templates/stressed.html')
+        self.response.write(museums_template.render())
 class MuseumsPage(webapp2.RequestHandler):
     def get(self):
-        museums_template = the_jinja_environment.get_template('templates/museums.html')
+        stressed_template = the_jinja_environment.get_template('templates/stressed.html')
         self.response.write(museums_template.render())
-
 class TechnologyPage(webapp2.RequestHandler):
     def get(self):
         technology_template = the_jinja_environment.get_template('templates/technology.html')
         self.response.write(technology_template.render())
-
 class ShoppingPage(webapp2.RequestHandler):
     def get(self):
         shopping_template = the_jinja_environment.get_template('templates/shopping.html')
         self.response.write(shopping_template.render())
-
 class DormPage(webapp2.RequestHandler):
     def get(self):
         dorm_template = the_jinja_environment.get_template('templates/dorm.html')
         self.response.write(dorm_template.render())
-
 class SpecificEventPage(webapp2.RequestHandler):
     def get(self):
         event_template = the_jinja_environment.get_template('templates/event.html')
@@ -164,6 +163,7 @@ app = webapp2.WSGIApplication([
     ('/events', EventsPage),
     ('/login', LoginPage),
     ('/books', BooksPage),
+    ('/stressed', StressedPage),
     ('/museums', MuseumsPage),
     ('/technology',TechnologyPage),
     ('/shopping', ShoppingPage),
