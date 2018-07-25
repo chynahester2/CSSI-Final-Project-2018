@@ -1,3 +1,85 @@
+body {
+  background-color: lightblue;
+  margin:0;
+  padding:0;
+  background:linear-gradient(rgba(255, 255, 255, .2), rgba(255, 255, 255, .2)), url("https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260") no-repeat center center fixed;
+  background-size: cover;
+  opacity: .7;
+}
+
+.logo {
+  color: gray;
+  text-align: center;
+  font-family: 'Shrikhand', cursive;
+  font-size: 10em;
+}
+
+div .buttonPanel {
+    background-color: lightpink; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin: 0 auto;
+}
+#nonfiction-button {
+  top: 100px;
+  left:100px;
+}
+#fiction-button {
+  top: 100px;
+  left: 100px;
+  align-items: center;
+}
+#advice-button {
+ top: 100px;
+ left: 100px;
+}
+#stressed-button {
+  top:100px;
+  left:100px;
+}
+.hexagon {
+font-family: 'Abril Fatface', cursive;
+font-size: 30px;
+}
+.hexagon {
+	width: 300px;
+	height: 150px;
+  background-color: lightpink;
+	position: relative;
+  align-items: center;
+  display:inline-block;
+}
+.hexagon:before {
+	content: "";
+	position: absolute;
+	top: -25px;
+	left: 0;
+	width: 0;
+	height: 0;
+	border-left: 150px solid transparent;
+	border-right: 150px solid transparent;
+	border-bottom: 25px solid lightpink;
+}
+.hexagon:after {
+	content: "";
+	position: absolute;
+	bottom: -25px;
+	left: 0;
+	width: 0;
+	height: 0;
+	border-left: 150px solid transparent;
+	border-right: 150px solid transparent;
+	border-top: 25px solid lightpink;
+}
+
 /* Style the header with a grey background and some padding */
 .header {
   overflow: hidden;

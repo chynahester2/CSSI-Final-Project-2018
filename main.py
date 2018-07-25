@@ -131,32 +131,35 @@ class BooksPage(webapp2.RequestHandler):
     def get(self):
         books_template = the_jinja_environment.get_template('templates/books.html')
         self.response.write(books_template.render())
-
+class StressedPage(webapp2.RequestHandler):
+    def get(self):
+        stressed_template = the_jinja_environment.get_template('templates/stressed.html')
+        self.response.write(stressed_template.render())
 class MuseumsPage(webapp2.RequestHandler):
     def get(self):
         museums_template = the_jinja_environment.get_template('templates/museums.html')
         self.response.write(museums_template.render())
-
 class TechnologyPage(webapp2.RequestHandler):
     def get(self):
         technology_template = the_jinja_environment.get_template('templates/technology.html')
         self.response.write(technology_template.render())
-
 class ShoppingPage(webapp2.RequestHandler):
     def get(self):
         shopping_template = the_jinja_environment.get_template('templates/shopping.html')
         self.response.write(shopping_template.render())
-
 class DormPage(webapp2.RequestHandler):
     def get(self):
         dorm_template = the_jinja_environment.get_template('templates/dorm.html')
         self.response.write(dorm_template.render())
+<<<<<<< HEAD
 
 class ClothesPage(webapp2.RequestHandler):
     def get(self):
         clothes_template = the_jinja_environment.get_template('templates/clothes.html')
         self.response.write(clothes_template.render())
 
+=======
+>>>>>>> 6a1bc98e90c9f37a974a6438251e957cf5553bb9
 class SpecificEventPage(webapp2.RequestHandler):
     def get(self):
         event_template = the_jinja_environment.get_template('templates/event.html')
@@ -168,15 +171,21 @@ app = webapp2.WSGIApplication([
     ('/discounts', DiscountPage),
     ('/events', EventsPage),
     ('/login', LoginPage),
+<<<<<<< HEAD
 # <<<<<<< HEAD
 # # <<<<<<< HEAD
 # =======
     ('/books', BooksPage),
 # >>>>>>> 046eb23aab787640a7284b67e11a1a317fb1fe99
+=======
+    ('/books', BooksPage),
+    ('/stressed', StressedPage),
+>>>>>>> 6a1bc98e90c9f37a974a6438251e957cf5553bb9
     ('/museums', MuseumsPage),
     ('/technology',TechnologyPage),
     ('/shopping', ShoppingPage),
     ('/dorm', DormPage),
+<<<<<<< HEAD
     ('/clothes', ClothesPage),
 # <<<<<<< HEAD
 # =======
@@ -185,4 +194,7 @@ app = webapp2.WSGIApplication([
 # =======
     ('/event', SpecificEventPage),
 # >>>>>>> 046eb23aab787640a7284b67e11a1a317fb1fe99
+=======
+    ('/event', SpecificEventPage)
+>>>>>>> 6a1bc98e90c9f37a974a6438251e957cf5553bb9
 ], debug=True)
