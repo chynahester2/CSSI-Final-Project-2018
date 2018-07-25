@@ -152,6 +152,11 @@ class DormPage(webapp2.RequestHandler):
         dorm_template = the_jinja_environment.get_template('templates/dorm.html')
         self.response.write(dorm_template.render())
 
+class ClothesPage(webapp2.RequestHandler):
+    def get(self):
+        clothes_template = the_jinja_environment.get_template('templates/clothes.html')
+        self.response.write(clothes_template.render())
+
 class SpecificEventPage(webapp2.RequestHandler):
     def get(self):
         event_template = the_jinja_environment.get_template('templates/event.html')
@@ -163,20 +168,21 @@ app = webapp2.WSGIApplication([
     ('/discounts', DiscountPage),
     ('/events', EventsPage),
     ('/login', LoginPage),
-<<<<<<< HEAD
 # <<<<<<< HEAD
-=======
+# # <<<<<<< HEAD
+# =======
     ('/books', BooksPage),
->>>>>>> 046eb23aab787640a7284b67e11a1a317fb1fe99
+# >>>>>>> 046eb23aab787640a7284b67e11a1a317fb1fe99
     ('/museums', MuseumsPage),
     ('/technology',TechnologyPage),
     ('/shopping', ShoppingPage),
     ('/dorm', DormPage),
-<<<<<<< HEAD
+    ('/clothes', ClothesPage),
+# <<<<<<< HEAD
 # =======
-    ('/event', SpecificEventPage)
+    ('/event', SpecificEventPage),
 # >>>>>>> 0b617c7fffc7cff5700e8315ab942282ba33f11f
-=======
-    ('/event', SpecificEventPage)
->>>>>>> 046eb23aab787640a7284b67e11a1a317fb1fe99
+# =======
+    ('/event', SpecificEventPage),
+# >>>>>>> 046eb23aab787640a7284b67e11a1a317fb1fe99
 ], debug=True)
