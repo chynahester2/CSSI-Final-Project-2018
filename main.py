@@ -170,6 +170,103 @@ class MusicPage(webapp2.RequestHandler):
     def get(self):
         music_template = the_jinja_environment.get_template('templates/music.html')
 
+class SportPage(webapp2.RequestHandler):
+    def get(self):
+        user = users.get_current_user()
+        status = logged_in()
+        link = users.create_logout_url('/login')
+        college = ""
+        if status == "Sign In":
+            link = '/login'
+        else:
+            college = User.get_by_id(user.user_id()).college
+        temp_dict = {'status': status, 'link': link, 'college': college}
+        sport_template = the_jinja_environment.get_template('templates/sport.html')
+        self.response.write(sport_template.render(temp_dict))
+
+class ComedyPage(webapp2.RequestHandler):
+    def get(self):
+        user = users.get_current_user()
+        status = logged_in()
+        link = users.create_logout_url('/login')
+        college = ""
+        if status == "Sign In":
+            link = '/login'
+        else:
+            college = User.get_by_id(user.user_id()).college
+        temp_dict = {'status': status, 'link': link, 'college': college}
+        comedy_template = the_jinja_environment.get_template('templates/comedy.html')
+        self.response.write(comedy_template.render(temp_dict))
+
+class FoodPage(webapp2.RequestHandler):
+    def get(self):
+        user = users.get_current_user()
+        status = logged_in()
+        link = users.create_logout_url('/login')
+        college = ""
+        if status == "Sign In":
+            link = '/login'
+        else:
+            college = User.get_by_id(user.user_id()).college
+        temp_dict = {'status': status, 'link': link, 'college': college}
+        food_template = the_jinja_environment.get_template('templates/food.html')
+        self.response.write(food_template.render(temp_dict))
+
+class FestivalPage(webapp2.RequestHandler):
+    def get(self):
+        user = users.get_current_user()
+        status = logged_in()
+        link = users.create_logout_url('/login')
+        college = ""
+        if status == "Sign In":
+            link = '/login'
+        else:
+            college = User.get_by_id(user.user_id()).college
+        temp_dict = {'status': status, 'link': link, 'college': college}
+        festival_template = the_jinja_environment.get_template('templates/festival.html')
+        self.response.write(festival_template.render(temp_dict))
+
+class ConcertPage(webapp2.RequestHandler):
+    def get(self):
+        user = users.get_current_user()
+        status = logged_in()
+        link = users.create_logout_url('/login')
+        college = ""
+        if status == "Sign In":
+            link = '/login'
+        else:
+            college = User.get_by_id(user.user_id()).college
+        temp_dict = {'status': status, 'link': link, 'college': college}
+        concert_template = the_jinja_environment.get_template('templates/concert.html')
+        self.response.write(concert_template.render(temp_dict))
+
+class TheaterPage(webapp2.RequestHandler):
+    def get(self):
+        user = users.get_current_user()
+        status = logged_in()
+        link = users.create_logout_url('/login')
+        college = ""
+        if status == "Sign In":
+            link = '/login'
+        else:
+            college = User.get_by_id(user.user_id()).college
+        temp_dict = {'status': status, 'link': link, 'college': college}
+        theater_template = the_jinja_environment.get_template('templates/theater.html')
+        self.response.write(theater_template.render(temp_dict))
+
+class AttractionsPage(webapp2.RequestHandler):
+    def get(self):
+        user = users.get_current_user()
+        status = logged_in()
+        link = users.create_logout_url('/login')
+        college = ""
+        if status == "Sign In":
+            link = '/login'
+        else:
+            college = User.get_by_id(user.user_id()).college
+        temp_dict = {'status': status, 'link': link, 'college': college}
+        attractions_template= the_jinja_environment.get_template('templates/attractions.html')
+        self.response.write(attractions_template.render(temp_dict))
 
 app = webapp2.WSGIApplication([
     ('/', WelcomePage),
@@ -180,7 +277,7 @@ app = webapp2.WSGIApplication([
 # # <<<<<<< HEAD
 # =======
     ('/books', BooksPage),
-# >>>>>>> 046eb23aab787640a7284b67e11a1a317fb1fe99
+    ('/stressed', StressedPage),
     ('/museums', MuseumsPage),
     ('/technology',TechnologyPage),
     ('/shopping', ShoppingPage),
@@ -189,13 +286,17 @@ app = webapp2.WSGIApplication([
     ('/laptop',LaptopPage),
 # <<<<<<< HEAD
 # =======
-    ('/event', SpecificEventPage),
-# >>>>>>> 0b617c7fffc7cff5700e8315ab942282ba33f11f
-# =======
-    ('/event', SpecificEventPage),
+    ('/music', MusicPage),
 <<<<<<< HEAD
 # >>>>>>> 046eb23aab787640a7284b67e11a1a317fb1fe99
 =======
     ('/music', MusicPage),
->>>>>>> c0708f2cf7b5e4abf8057438cb83f836370a26e6
+    ('/events/sport', SportPage),
+    ('/events/comedy', ComedyPage),
+    ('/events/food', FoodPage),
+    ('/events/festival', FestivalPage),
+    ('/events/music', ConcertPage),
+    ('/events/theater', TheaterPage),
+    ('/events/attractions', AttractionsPage)
+>>>>>>> 2e88d37d759ef260b19e89cccc1dce95641a1758
 ], debug=True)
