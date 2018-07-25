@@ -132,6 +132,11 @@ class BooksPage(webapp2.RequestHandler):
         books_template = the_jinja_environment.get_template('templates/books.html')
         self.response.write(books_template.render())
 
+class StressedPage(webapp2.RequestHandler):
+    def get(self):
+        stressed_template = the_jinja_environment.get_template('templates/stressed.html')
+        self.response.write(stressed_template.render())
+
 class MuseumsPage(webapp2.RequestHandler):
     def get(self):
         museums_template = the_jinja_environment.get_template('templates/museums.html')
@@ -170,6 +175,14 @@ class MusicPage(webapp2.RequestHandler):
     def get(self):
         music_template = the_jinja_environment.get_template('templates/music.html')
 
+<<<<<<< HEAD
+=======
+class MeditationPage(webapp2.RequestHandler):
+    def get(self):
+        meditation_template = the_jinja_environment.get_template('templates/meditation.html')
+        self.response.write(meditation_template.render())
+
+>>>>>>> 52d91c74555cd1f51cf51dba0e9e502aa4bc8d6e
 class SportPage(webapp2.RequestHandler):
     def get(self):
         user = users.get_current_user()
@@ -273,9 +286,6 @@ app = webapp2.WSGIApplication([
     ('/discounts', DiscountPage),
     ('/events', EventsPage),
     ('/login', LoginPage),
-# <<<<<<< HEAD
-# # <<<<<<< HEAD
-# =======
     ('/books', BooksPage),
     ('/stressed', StressedPage),
     ('/museums', MuseumsPage),
@@ -284,6 +294,7 @@ app = webapp2.WSGIApplication([
     ('/dorm', DormPage),
     ('/clothes', ClothesPage),
     ('/laptop',LaptopPage),
+<<<<<<< HEAD
 # <<<<<<< HEAD
 # =======
     ('/music'MusicPage),
@@ -291,6 +302,10 @@ app = webapp2.WSGIApplication([
 # >>>>>>> 046eb23aab787640a7284b67e11a1a317fb1fe99
 =======
     ('/music', MusicPage),
+=======
+    ('/music', MusicPage),
+    ('/meditation', MeditationPage),
+>>>>>>> 52d91c74555cd1f51cf51dba0e9e502aa4bc8d6e
     ('/events/sport', SportPage),
     ('/events/comedy', ComedyPage),
     ('/events/food', FoodPage),
@@ -298,5 +313,4 @@ app = webapp2.WSGIApplication([
     ('/events/music', ConcertPage),
     ('/events/theater', TheaterPage),
     ('/events/attractions', AttractionsPage)
->>>>>>> 2e88d37d759ef260b19e89cccc1dce95641a1758
 ], debug=True)
