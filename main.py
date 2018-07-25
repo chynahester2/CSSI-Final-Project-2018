@@ -114,12 +114,12 @@ app = webapp2.WSGIApplication([
     ('/discounts', DiscountPage),
     ('/events', EventsPage),
     ('/login', LoginPage),
-<<<<<<< HEAD
+# <<<<<<< HEAD
     ('/museums', MuseumsPage),
     ('/technology',TechnologyPage),
     ('/shopping', ShoppingPage),
     ('/dorm', DormPage),
-=======
+# =======
     ('/event', SpecificEventPage)
->>>>>>> 0b617c7fffc7cff5700e8315ab942282ba33f11f
+# >>>>>>> 0b617c7fffc7cff5700e8315ab942282ba33f11f
 ], debug=True)
