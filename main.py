@@ -131,22 +131,22 @@ class BooksPage(webapp2.RequestHandler):
     def get(self):
         books_template = the_jinja_environment.get_template('templates/books.html')
         self.response.write(books_template.render())
-class StressedPage(webapp2.RequestHandler):
-    def get(self):
-        stressed_template = the_jinja_environment.get_template('templates/stressed.html')
-        self.response.write(stressed_template.render())
+
 class MuseumsPage(webapp2.RequestHandler):
     def get(self):
         museums_template = the_jinja_environment.get_template('templates/museums.html')
         self.response.write(museums_template.render())
+
 class TechnologyPage(webapp2.RequestHandler):
     def get(self):
         technology_template = the_jinja_environment.get_template('templates/technology.html')
         self.response.write(technology_template.render())
+
 class ShoppingPage(webapp2.RequestHandler):
     def get(self):
         shopping_template = the_jinja_environment.get_template('templates/shopping.html')
         self.response.write(shopping_template.render())
+
 class DormPage(webapp2.RequestHandler):
     def get(self):
         dorm_template = the_jinja_environment.get_template('templates/dorm.html')
@@ -156,6 +156,11 @@ class ClothesPage(webapp2.RequestHandler):
     def get(self):
         clothes_template = the_jinja_environment.get_template('templates/clothes.html')
         self.response.write(clothes_template.render())
+
+class LaptopPage(webapp2.RequestHandler):
+    def get(self):
+        laptop_template = the_jinja_environment.get_template('templates/laptop.html')
+        self.response.write(laptop_template.render())
 
 class SpecificEventPage(webapp2.RequestHandler):
     def get(self):
@@ -168,14 +173,22 @@ app = webapp2.WSGIApplication([
     ('/discounts', DiscountPage),
     ('/events', EventsPage),
     ('/login', LoginPage),
+# <<<<<<< HEAD
+# # <<<<<<< HEAD
+# =======
     ('/books', BooksPage),
-    ('/books', BooksPage),
-    ('/stressed', StressedPage),
+# >>>>>>> 046eb23aab787640a7284b67e11a1a317fb1fe99
     ('/museums', MuseumsPage),
     ('/technology',TechnologyPage),
     ('/shopping', ShoppingPage),
     ('/dorm', DormPage),
     ('/clothes', ClothesPage),
+    ('/laptop',LaptopPage),
+# <<<<<<< HEAD
+# =======
     ('/event', SpecificEventPage),
+# >>>>>>> 0b617c7fffc7cff5700e8315ab942282ba33f11f
+# =======
     ('/event', SpecificEventPage),
+# >>>>>>> 046eb23aab787640a7284b67e11a1a317fb1fe99
 ], debug=True)
