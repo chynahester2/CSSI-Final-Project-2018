@@ -181,7 +181,7 @@ class TechnologyPage(webapp2.RequestHandler):
             college = User.get_by_id(user.user_id()).college
         temp_dict = {'status': status, 'link': link, 'college': college}
         technology_template = the_jinja_environment.get_template('templates/technology.html')
-        self.response.write(technology_template.render(temtemp_dict))
+        self.response.write(technology_template.render(temp_dict))
 
 class ShoppingPage(webapp2.RequestHandler):
     def get(self):
@@ -372,7 +372,7 @@ app = webapp2.WSGIApplication([
     ('/dorm', DormPage),
     ('/clothes', ClothesPage),
     ('/laptop',LaptopPage),
-    ('/music'MusicPage),
+    ('/music',MusicPage),
     ('/music', MusicPage),
     ('/music', MusicPage),
     ('/meditation', MeditationPage),
