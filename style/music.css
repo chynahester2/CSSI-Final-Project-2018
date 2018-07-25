@@ -1,0 +1,114 @@
+body {
+  background-color: lightblue;
+  margin:0;
+  padding:0;
+  background:linear-gradient(rgba(255, 255, 255, .2), rgba(255, 255, 255, .2)), url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/music-staff_b1d89oyes__F0000.png") no-repeat center center fixed;
+  background-size: cover;
+<<<<<<< HEAD
+  opacity: .7;
+  margin: 0;
+  padding: 0;
+=======
+  opacity: .7;
+>>>>>>> 0105618f6668c015703968c798b4cc9e6a397581
+}
+.logo {
+  color: gray;
+  text-align: center;
+  font-family: 'Shrikhand', cursive;
+  font-size: 10em;
+}
+div .buttonPanel {
+  background-color: lightblue; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin: 0 auto;
+}
+#music-button{
+  top: 100px;
+  left: 100px;
+}
+#apple-button {
+  top: 100px;
+  left:100px;
+}
+#peaceful-button{
+  top:100px;
+  left:100px;
+}
+#pump-up-button{
+  top:100px;
+  left:100px;
+}
+.btn {
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  border: 1px solid pink;
+  font-size: 70px;
+  font-family: 'Shrikhand', cursive;
+  }
+
+/* Style the header with a grey background and some padding */
+.header {
+  overflow: hidden;
+  background-color: #f1f1f1;
+  padding: 20px 100px;
+}
+
+/* Style the header links */
+.header a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  bottom: 100px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+  font-family: 'Abril Fatface', cursive;
+}
+
+/* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+.header a.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+/* Change the background color on mouse-over */
+.header a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Style the active/current link*/
+.header a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+/* Float the link section to the right */
+.header-right {
+  float: right;
+}
+
+/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .header-right {
+    float: none;
+  }
+}

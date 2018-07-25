@@ -164,8 +164,12 @@ class SpecificEventPage(webapp2.RequestHandler):
 class MusicPage(webapp2.RequestHandler):
     def get(self):
         music_template = the_jinja_environment.get_template('templates/music.html')
+        self.response.write(music_template.render())
 
-
+class MeditationPage(webapp2.RequestHandler):
+    def get(self):
+        meditation_template = the_jinja_environment.get_template('templates/meditation.html')
+        self.response.write(meditation_template.render())
 app = webapp2.WSGIApplication([
     ('/', WelcomePage),
     ('/discounts', DiscountPage),
@@ -182,4 +186,5 @@ app = webapp2.WSGIApplication([
     ('/event', SpecificEventPage),
     ('/event', SpecificEventPage),
     ('/music', MusicPage),
+    ('/meditation', MeditationPage),
 ], debug=True)
