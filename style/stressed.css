@@ -28,16 +28,16 @@ div .buttonPanel {
     width: 50%;
     margin: 0 auto;
 }
-#nonfiction-button {
+#games-button {
   top: 100px;
   left:100px;
 }
-#fiction-button {
+#meditation-button {
   top: 100px;
   left: 100px;
   align-items: center;
 }
-#advice-button {
+#music-button {
  top: 100px;
  left: 100px;
 }

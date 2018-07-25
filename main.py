@@ -161,6 +161,9 @@ class SpecificEventPage(webapp2.RequestHandler):
     def get(self):
         event_template = the_jinja_environment.get_template('templates/event.html')
 
+class MusicPage(webapp2.RequestHandler):
+    def get(self):
+        music_template = the_jinja_environment.get_template('templates/music.html')
 
 
 app = webapp2.WSGIApplication([
@@ -178,4 +181,5 @@ app = webapp2.WSGIApplication([
     ('/clothes', ClothesPage),
     ('/event', SpecificEventPage),
     ('/event', SpecificEventPage),
+    ('/music', MusicPage),
 ], debug=True)
