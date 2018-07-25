@@ -1,5 +1,4 @@
 * {box-sizing: border-box;}
-body {font-family: Verdana, sans-serif;}
 .mySlides {display: none;}
 img {
   vertical-align: middle;
@@ -55,7 +54,7 @@ img {
 }
 
 @keyframes fade {
-  0% {opacity: .4}
+  0% {opacity: 0.4}
   100% {opacity: 1}
 }
 
@@ -63,14 +62,14 @@ img {
 @media only screen and (max-width: 300px) {
   .text {font-size: 11px}
 }
-/*  */
+
 body {
   background-color: lightblue;
   /* margin:0;
-  padding:0;
+  padding:0; */
   /* background:linear-gradient(rgba(255, 255, 255, .2), rgba(255, 255, 255, .2)), url("http://dailycaring.com/wp-content/uploads/2015/12/discountoffer1200x630.jpg") no-repeat center center fixed; */
   background-size: cover;
-  opacity: .7; */
+  font-family: Verdana, sans-serif;
 }
 .logo {
   color: gray;
@@ -79,18 +78,18 @@ body {
   font-size: 10em;
 }
 div .buttonPanel {
-    background-color: gray; /* Green */
-    border: none;
-    color: white;
-    padding: 10px 15px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    justify-content: center;
-    align-items: center;
-    width: 40%;
-    margin: 0 auto;
+  background-color: gray;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  margin: 0 auto;
 }
 #museums-button {
   top: 10px;
@@ -110,16 +109,15 @@ div .buttonPanel {
   left:100px;
 }
 .hexagon {
-font-family: 'Abril Fatface', cursive;
-font-size: 30px;
-}
-.hexagon {
+  font-family: 'Abril Fatface', cursive;
+  font-size: 30px;
 	width: 300px;
 	height: 100px;
   background-color: gray;
 	position: relative;
   align-items: center;
   display:inline-block;
+  opacity: 0.7;
 }
 .hexagon:before {
 	content: "";
@@ -147,7 +145,8 @@ font-size: 30px;
 .header {
   overflow: hidden;
   background-color: #f1f1f1;
-  padding: 10px 50px;
+  padding: 20px 100px;
+  opacity: 0.7;
 }
 
 /* Style the header links */
@@ -180,6 +179,7 @@ font-size: 30px;
 .header a.active {
   background-color: dodgerblue;
   color: white;
+
 }
 
 /* Float the link section to the right */
