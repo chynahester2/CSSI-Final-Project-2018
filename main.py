@@ -64,22 +64,136 @@ class EventsPage(webapp2.RequestHandler):
 
                 <div id="Georgia Tech" class="tabcontent" style="display: none;">
                     <h3>Georgia Tech</h3>
-                    <p>This is the events page for Georgia Tech</p>
+                    <table>
+                    <tr>
+                    <td>
+                    <h4>Robot Improv Circus</h4>
+                    <ul style="list-style-type: none">
+                    <li>Date &ndash; Friday, July 27, 2018</li>
+                    <li>Time &ndash; 10:00AM - 4:00PM</li>
+                    <li>Location &ndash; Tech Rec in the Student Center</li>
+                    <li>Description &ndash; The Expressive Machinery Lab (formerly the ADAM Lab), directed by Brian Magerko, presents a preview of the Robot Improv Circus &ndash; a virtual reality installation where participants will collaborate with a robotic virtual stage partner to play the Props Game</li>
+                    </ul>
+                    </td>
+                    </tr>
+                    <tr>
+                    <td>
+                    <h4>End of Summer 2018 Term</h4>
+                    <ul style="list-style-type: none">
+                    <li>Date &ndash; Friday, August 3, 2018</li>
+                    <li>Time &ndash; All Day</li>
+                    <li>Location &ndash; Georgia Tech Campus</li>
+                    <li>Description &ndash; End of Term - All Summer Sessions 2018</li>
+                    </ul>
+                    </td>
+                    </tr>
+                    </table>
                 </div>
 
                 <div id="Georgia State University" class="tabcontent" style="display: none;">
                     <h3>Georgia State University</h3>
-                    <p>This is the events page for Georgia State University</p>
+                    <table>
+                    <tr>
+                    <td>
+                    <h4>Panther Band Camp</h4>
+                    <ul style="list-style-type: none">
+                    <li>Date &ndash; Monday, August 13 - Saturday, August 18, 2018</li>
+                    <li>Time &ndash; All Day</li>
+                    <li>Location &ndash; Helen M. Aderhold Learning</li>
+                    <li>Description &ndash; The 2018-2019 Panther Band Auditions take place at the Atlanta campus. </li>
+                    </ul>
+                    </td>
+                    </tr>
+                    <tr>
+                    <td>
+                    <h4>Feed Your Senses featuring Pianist Kenneth Banks, Jr.</h4>
+                    <ul style="list-style-type: none">
+                    <li>Date &ndash; Wednesday, August 15, 2018</li>
+                    <li>Time &ndash; 12:00PM - 1:00PM</li>
+                    <li>Location &ndash; Rialto Center for the Arts</li>
+                    <li>Description &ndash; The program features a different artist or speaker each month providing a casual and fun insider&#39;s look at their craft.</li>
+                    </ul>
+                    </td>
+                    </tr>
+                    <tr>
+                    <td>
+                    <h4>4th Annual Plays in a Day Theater Festival Showcase</h4>
+                    <ul style="list-style-type: none">
+                    <li>Date &ndash; Saturday, August 25, 2018</li>
+                    <li>Time &ndash; 8:00PM - 10:00PM</li>
+                    <li>Location &ndash; Marvin Cole Auditorium</li>
+                    <li>Description &ndash; Students perform a set of plays that, 24 hours before, didn&#39;t exist. Within a single day, Students write, direct, rehearse, tech and perform completely new and original works of theatre.</li>
+                    </ul>
+                    </td>
+                    </tr>
+                    </table>
                 </div>
 
                 <div id="Emory University" class="tabcontent" style="display: none;">
                     <h3>Emory University</h3>
-                    <p>This is the events page for Emory University</p>
+                    <table>
+                    <tr>
+                    <td>
+                    <h4>Emory Farmers Market</h4>
+                    <ul style="list-style-type: none">
+                    <li>Date &ndash; Tuesday, July 31, 2018</li>
+                    <li>Time &ndash; 11:00AM - 3:00PM</li>
+                    <li>Location &ndash; Cox Hall Bridge</li>
+                    <li>Description &ndash; The Emory Farmers Market features fresh, seasonal local produce; artisanal bread; honey; other artisan products and baked goods; fair trade and organic coffee options; and diverse lunch options.</li>
+                    </ul>
+                    </td>
+                    </tr>
+                    <tr>
+                    <td>
+                    <h4>SURE Research Symposium</h4>
+                    <ul style="list-style-type: none">
+                    <li>Date &ndash; Thursday, August 2, 2018</li>
+                    <li>Time &ndash; 10:00AM - 2:30PM</li>
+                    <li>Location &ndash; Math/Science Center Lobby and Room N304</li>
+                    <li>Description &ndash; The SURE Research Symposium provides the opportunity for the SURE undergraduate researchers who have completed full-time research for 10-weeks this summer to present their research for all to see.</li>
+                    </ul>
+                    </td>
+                    </tr>
+                    <tr>
+                    <td>
+                    <h4>End of Summer 2018 Term</h4>
+                    <ul style="list-style-type: none">
+                    <li>Date &ndash; Friday, August 10, 2018</li>
+                    <li>Time &ndash; All Day</li>
+                    <li>Location &ndash; Emory University Campus</li>
+                    <li>Description &ndash; End of Term - All Summer Sessions 2018</li>
+                    </ul>
+                    </td>
+                    </tr>
+                    </table>
                 </div>
 
                 <div id="Spelman College" class="tabcontent" style="display: none;">
                     <h3>Spelman College</h3>
-                    <p>This is the events page for Spelman College</p>
+                    <table>
+                    <tr>
+                    <td>
+                    <h4>New Student Orientation</h4>
+                    <ul style="list-style-type: none">
+                    <li>Date &ndash; Wednesday, August 8 - Tuesday, August 14, 2018</li>
+                    <li>Time &ndash; All Day</li>
+                    <li>Location &ndash; Spelman College Campus</li>
+                    <li>Description &ndash; Incoming freshman are formally introduced to Spelman College and tour the campus.</li>
+                    </ul>
+                    </td>
+                    </tr>
+                    <tr>
+                    <td>
+                    <h4>First Day of Classes</h4>
+                    <ul style="list-style-type: none">
+                    <li>Date &ndash; Wednesday, August 15, 2018</li>
+                    <li>Time &ndash; All Day</li>
+                    <li>Location &ndash; Spelman College Campus</li>
+                    <li>Description &ndash; The start of the Fall Term.</li>
+                    </ul>
+                    </td>
+                    </tr>
+                    </table>
                 </div>''')
 
 class LoginPage(webapp2.RequestHandler):
