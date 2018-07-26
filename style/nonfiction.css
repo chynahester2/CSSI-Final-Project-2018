@@ -2,61 +2,57 @@ body {
   background-color: lightblue;
   margin:0;
   padding:0;
-  background:linear-gradient(rgba(255, 255, 255, .2), rgba(255, 255, 255, .2)), url("https://www.panview.nl/sites/default/files/field/image/Money.jpg") no-repeat center center fixed;
+  background:linear-gradient(rgba(255, 255, 255, .2), rgba(255, 255, 255, .2)), url("http://papers.co/wallpaper/papers.co-vd04-globe-in-line-art-triangle-dark-pattern-35-3840x2160-4k-wallpaper.jpg") no-repeat center center fixed;
   background-size: cover;
-<<<<<<< HEAD
-<<<<<<< HEAD
   opacity: .7;
-=======
->>>>>>> 2e88d37d759ef260b19e89cccc1dce95641a1758
-  margin: 0;
-  padding: 0;
-  opacity: .7;
-  font-family: 'Abril Fatface', cursive;
 }
+
 .logo {
   color: gray;
   text-align: center;
   font-family: 'Shrikhand', cursive;
   font-size: 10em;
 }
+
 div .buttonPanel {
-  background-color: lightgreen; /* Green */
-  border: none;
-  color: white;
-  padding: 10px 15px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  justify-content: center;
-  align-items: center;
-  width: 50%;
-  margin: 0 auto;
+    background-color: lightpink; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin: 0 auto;
 }
-#museums-button {
+#nonfiction-button {
   top: 100px;
   left:100px;
 }
-#movies-button {
+#fiction-button {
   top: 100px;
   left: 100px;
   align-items: center;
 }
-#technology-button {
+#advice-button {
  top: 100px;
  left: 100px;
 }
-#dorm-button {
+#input-button {
   top:100px;
   left:100px;
 }
 .hexagon {
-  font-family: 'Abril Fatface', cursive;
-  font-size: 30px;
+font-family: 'Abril Fatface', cursive;
+font-size: 30px;
+}
+.hexagon {
 	width: 300px;
 	height: 150px;
-  background-color: lightgreen;
+  background-color: lightpink;
 	position: relative;
   align-items: center;
   display:inline-block;
@@ -70,7 +66,7 @@ div .buttonPanel {
 	height: 0;
 	border-left: 150px solid transparent;
 	border-right: 150px solid transparent;
-	border-bottom: 25px solid lightgreen;
+	border-bottom: 25px solid lightpink;
 }
 .hexagon:after {
 	content: "";
@@ -81,8 +77,9 @@ div .buttonPanel {
 	height: 0;
 	border-left: 150px solid transparent;
 	border-right: 150px solid transparent;
-	border-top: 25px solid lightgreen;
+	border-top: 25px solid lightpink;
 }
+
 /* Style the header with a grey background and some padding */
 .header {
   overflow: hidden;
