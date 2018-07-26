@@ -5,6 +5,7 @@ body {
   background:linear-gradient(rgba(255, 255, 255, .2), rgba(255, 255, 255, .2)), url("https://lensdrop.imgix.net/photos/gdnw1/stock-photo-gdnw1.jpeg?mark=%2Fwm.png&markalign=center%2Cmiddle&markh=0.1&w=1200&h=650&s=80306ee925fae4e5243b0c6a0af1fc8e") no-repeat center center fixed;
   background-size: cover;
   opacity: .7;
+  text-align: center;
 }
 .logo {
   color: gray;
