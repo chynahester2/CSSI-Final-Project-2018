@@ -2,7 +2,7 @@ body {
   background-color: lightblue;
   margin:0;
   padding:0;
-  background:linear-gradient(rgba(255, 255, 255, .2), rgba(255, 255, 255, .2)), url("https://thumbs.dreamstime.com/b/abstract-drawing-oil-paints-canvas-floral-ornament-background-graphic-51862513.jpg") no-repeat center center fixed;
+  background:linear-gradient(rgba(255, 255, 255, .2), rgba(255, 255, 255, .2)), url("http://pilleblogi.com/wp-content/uploads/2015/05/pattern-light-bokeh-wallpaper.jpg") no-repeat center center fixed;
   background-size: cover;
   opacity: .7;
 }
@@ -144,7 +144,7 @@ font-size: 30px;
 ul.breadcrumb {
     padding: 10px 16px;
     list-style: none;
-    background-color: mediumvioletred;
+    background-color: silver;
     text-align: left;
 }
 ul.breadcrumb li {
