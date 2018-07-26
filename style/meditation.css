@@ -4,6 +4,11 @@ body {
   padding:0;
   background:linear-gradient(rgba(255, 255, 255, .2), rgba(255, 255, 255, .2)), url("https://elsouvenir.com/wp-content/uploads/2017/06/caribe.jpg") no-repeat center center fixed;
   background-size: cover;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  top: 200px;
+  left: 100px;
 <<<<<<< HEAD
   opacity: .7;
   margin: 0;
@@ -18,6 +23,14 @@ body {
   font-family: 'Shrikhand', cursive;
   font-size: 10em;
 }
+
+#meditate-button {
+text-align: center;
+align-items: center;
+justify-content: center;
+top: 150px;
+left: 100px;
+}
 div .buttonPanel {
   background-color: lightblue; /* Green */
   border: none;
@@ -31,11 +44,13 @@ div .buttonPanel {
   align-items: center;
   width: 50%;
   margin: 0 auto;
-  top: 100px;
+  top: 300px;
   left: 100px;
   right: 100px;
   text-align: center;
   justify-content: center;
+  align-content: center;
+  flex: auto;
 }
 
 .fade {
@@ -45,12 +60,9 @@ div .buttonPanel {
   background:linear-gradient(rgba(255, 255, 255, .2), rgba(255, 255, 255, .2)), url("https://s-media-cache-ak0.pinimg.com/originals/78/9c/78/789c78fd05e6cd1fd0cfa4b80a64245e.jpg") no-repeat center center fixed;
   font-size: 70px;
   font-family: 'Shrikhand', cursive;
+  top:150px;
   }
-  #meditate-button {
-  
-  align-items: center;
-  justify-content: center;
-}
+
   .fade
 {
         opacity:0.5;
@@ -78,6 +90,7 @@ div .buttonPanel {
   float: left;
   color: black;
   text-align: center;
+  top:100px;
   padding: 12px;
   bottom: 100px;
   text-decoration: none;

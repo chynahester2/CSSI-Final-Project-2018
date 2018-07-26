@@ -494,6 +494,11 @@ class InputPage(webapp2.RequestHandler):
         input_template = the_jinja_environment.get_template('templates/input.html')
         self.response.write(input_template.render())
 
+class AboutPage(webapp2.RequestHandler):
+    def get(self):
+        about_template = the_jinja_environment.get_template('templates/about.html')
+        self.response.write(about_template.render())        
+
 app = webapp2.WSGIApplication([
     ('/', WelcomePage),
     ('/discounts', DiscountPage),
@@ -520,4 +525,5 @@ app = webapp2.WSGIApplication([
     ('/fiction', FictionPage),
     ('/advice', AdvicePage),
     ('/input', InputPage),
+    ('/about', AboutPage),
 ], debug=True)

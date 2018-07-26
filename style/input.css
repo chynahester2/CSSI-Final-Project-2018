@@ -13,7 +13,11 @@ body {
   font-family: 'Shrikhand', cursive;
   font-size: 10em;
 }
-
+div .suggestions {
+  font-size: 16px;
+  justify-content: center;
+  align-items: center;
+}
 div .buttonPanel {
     background-color: lightpink; /* Green */
     border: none;
@@ -28,6 +32,7 @@ div .buttonPanel {
     width: 50%;
     margin: 0 auto;
 }
+
 #nonfiction-button {
   top: 100px;
   left:100px;
