@@ -4,16 +4,36 @@ body {
   padding:0;
   background:linear-gradient(rgba(255, 255, 255, .2), rgba(255, 255, 255, .2)), url("https://www.panview.nl/sites/default/files/field/image/Money.jpg") no-repeat center center fixed;
   background-size: cover;
-<<<<<<< HEAD
-<<<<<<< HEAD
   opacity: .7;
-=======
->>>>>>> 2e88d37d759ef260b19e89cccc1dce95641a1758
   margin: 0;
   padding: 0;
   opacity: .7;
   font-family: 'Abril Fatface', cursive;
 }
+
+ul.breadcrumb {
+    padding: 10px 16px;
+    list-style: none;
+    background-color: mediumvioletred;
+}
+ul.breadcrumb li {
+    display: inline;
+    font-size: 18px;
+}
+ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: black;
+    content: "/\00a0";
+}
+ul.breadcrumb li a {
+    color: #0275d8;
+    text-decoration: none;
+}
+ul.breadcrumb li a:hover {
+    color: #01447e;
+    text-decoration: underline;
+}
+
 .logo {
   color: gray;
   text-align: center;

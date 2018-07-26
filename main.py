@@ -3,6 +3,7 @@ import jinja2
 import os
 from google.appengine.api import users
 from models import User
+from models import Advice
 
 the_jinja_environment = jinja2.Environment(
     loader = jinja2.FileSystemLoader(os.path.dirname(__file__)),
@@ -31,8 +32,17 @@ class WelcomePage(webapp2.RequestHandler):
 
 class DiscountPage(webapp2.RequestHandler):
     def get(self):
+        user = users.get_current_user()
+        status = logged_in()
+        link = users.create_logout_url('/login')
+        college = ""
+        if status == "Sign In":
+            link = '/login'
+        else:
+            college = User.get_by_id(user.user_id()).college
+        temp_dict = {'status': status, 'link': link, 'college': college}
         discount_template = the_jinja_environment.get_template('templates/discount.html')
-        self.response.write(discount_template.render())
+        self.response.write(discount_template.render(temp_dict))
 
 class EventsPage(webapp2.RequestHandler):
     def get(self):
@@ -359,8 +369,17 @@ class SpecificEventPage(webapp2.RequestHandler):
 
 class MusicPage(webapp2.RequestHandler):
     def get(self):
+        user = users.get_current_user()
+        status = logged_in()
+        link = users.create_logout_url('/login')
+        college = ""
+        if status == "Sign In":
+            link = '/login'
+        else:
+            college = User.get_by_id(user.user_id()).college
+        temp_dict = {'status': status, 'link': link, 'college': college}
         music_template = the_jinja_environment.get_template('templates/music.html')
-        self.response.write(music_template.render())
+        self.response.write(music_template.render(temp_dict))
 
 class MeditationPage(webapp2.RequestHandler):
     def get(self):
@@ -476,28 +495,73 @@ class AttractionsPage(webapp2.RequestHandler):
 
 class NonfictionPage(webapp2.RequestHandler):
     def get(self):
+        user = users.get_current_user()
+        status = logged_in()
+        link = users.create_logout_url('/login')
+        college = ""
+        if status == "Sign In":
+            link = '/login'
+        else:
+            college = User.get_by_id(user.user_id()).college
+        temp_dict = {'status': status, 'link': link, 'college': college}
         nonfiction_template = the_jinja_environment.get_template('templates/nonfiction.html')
-        self.response.write(nonfiction_template.render())
+        self.response.write(nonfiction_template.render(temp_dict))
 
 class FictionPage(webapp2.RequestHandler):
     def get(self):
+        user = users.get_current_user()
+        status = logged_in()
+        link = users.create_logout_url('/login')
+        college = ""
+        if status == "Sign In":
+            link = '/login'
+        else:
+            college = User.get_by_id(user.user_id()).college
+        temp_dict = {'status': status, 'link': link, 'college': college}
         fiction_template = the_jinja_environment.get_template('templates/fiction.html')
-        self.response.write(fiction_template.render())
+        self.response.write(fiction_template.render(temp_dict))
 
 class AdvicePage(webapp2.RequestHandler):
     def get(self):
+        user = users.get_current_user()
+        status = logged_in()
+        link = users.create_logout_url('/login')
+        college = ""
+        if status == "Sign In":
+            link = '/login'
+        else:
+            college = User.get_by_id(user.user_id()).college
+        temp_dict = {'status': status, 'link': link, 'college': college}
         advice_template = the_jinja_environment.get_template('templates/advice.html')
-        self.response.write(advice_template.render())
+        self.response.write(advice_template.render(temp_dict))
 
 class InputPage(webapp2.RequestHandler):
     def get(self):
+        user = users.get_current_user()
+        status = logged_in()
+        link = users.create_logout_url('/login')
+        college = ""
+        if status == "Sign In":
+            link = '/login'
+        else:
+            college = User.get_by_id(user.user_id()).college
+        temp_dict = {'status': status, 'link': link, 'college': college}
         input_template = the_jinja_environment.get_template('templates/input.html')
-        self.response.write(input_template.render())
+        self.response.write(input_template.render(temp_dict))
 
 class AboutPage(webapp2.RequestHandler):
     def get(self):
+        user = users.get_current_user()
+        status = logged_in()
+        link = users.create_logout_url('/login')
+        college = ""
+        if status == "Sign In":
+            link = '/login'
+        else:
+            college = User.get_by_id(user.user_id()).college
+        temp_dict = {'status': status, 'link': link, 'college': college}
         about_template = the_jinja_environment.get_template('templates/about.html')
-        self.response.write(about_template.render())        
+        self.response.write(about_template.render(temp_dict))
 
 app = webapp2.WSGIApplication([
     ('/', WelcomePage),
