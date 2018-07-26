@@ -1,8 +1,8 @@
-/* body {
+body {
   background-color: lightblue;
   margin:0;
   padding:0;
-  background:linear-gradient(rgba(255, 255, 255, .2), rgba(255, 255, 255, .2)), url("http://dailycaring.com/wp-content/uploads/2015/12/discountoffer1200x630.jpg") no-repeat center center fixed;
+  background:linear-gradient(rgba(255, 255, 255, .2), rgba(255, 255, 255, .2)), url("https://thumbs.dreamstime.com/b/empty-table-blur-clothing-store-bokeh-background-product-display-98545045.jpg") no-repeat center center fixed;
   background-size: cover;
   opacity: .7;
 }
@@ -13,7 +13,7 @@
   font-size: 10em;
 }
 div .buttonPanel {
-    background-color: gray; /* Green */
+    background-color: gray; /* Green
     border: none;
     color: white;
     padding: 10px 15px;
