@@ -4,11 +4,7 @@ body {
   padding:0;
   background:linear-gradient(rgba(255, 255, 255, .2), rgba(255, 255, 255, .2)), url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/music-staff_b1d89oyes__F0000.png") no-repeat center center fixed;
   background-size: cover;
-<<<<<<< HEAD
-  opacity: .7;
-  margin: 0;
-  padding: 0;
-  opacity: .7;
+  opacity: .8;
 }
 .logo {
   color: gray;
@@ -16,18 +12,18 @@ body {
   font-family: 'Shrikhand', cursive;
   font-size: 10em;
 }
-div .buttonPanel {
-  background-color: lightblue; /* Green */
+.buttonPanel {/* Green */
   border: none;
   color: white;
   padding: 10px 15px;
+  margin-top: 10px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
   justify-content: center;
   align-items: center;
-  width: 50%;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -36,9 +32,19 @@ div .buttonPanel {
   width: 300px;
   border-radius: 50%;
   border: 1px solid pink;
-  font-size: 70px;
+  font-size: 50px;
   font-family: 'Shrikhand', cursive;
   }
+
+table {
+  width: 100%;
+  padding-right: 25px;
+  height: 100%;
+}
+
+td {
+  padding-top: 30px;
+}
 
 /* Style the header with a grey background and some padding */
 .header {
