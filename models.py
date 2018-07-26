@@ -8,4 +8,3 @@ class User(ndb.Model):
 class Advice(ndb.Model):
     book_name = ndb.StringProperty()
     author_name = ndb.StringProperty()
-    genre = ndb.StringProperty()

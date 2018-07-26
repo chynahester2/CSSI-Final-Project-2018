@@ -44,6 +44,13 @@
 </div>
 
 <br><br><br><br><br><br><br><br><br><br>
+<div id='suggestions'>
+<h4>Suggestions from the Community</h4>
+{% for advice in suggestion %}
+  <p>{{first_name}} {{last_name}} from {{college}} suggested {{advice.book_name}} written by {{advice.author_name}}.</p>
+{% endfor %}
+<p><a href="/input">Click</a> to go make your own book suggestion</p>
+</div>
 <!-- <div id = "suggestions">
   <form method="post">
     <h4>Have any book suggestions? Enter them here:</h4>

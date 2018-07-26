@@ -214,14 +214,15 @@ class LoginPage(webapp2.RequestHandler):
             self.response.write('''
                 Please log in to our site! <br>
                 <a href="%s">Sign in</a><br><br>
-                Or sign up now!<br><a href="%s">Sign Up</a>'''
+                Or sign up now!<br><a href="%s">Sign Up</a><br><br>
+                <a href="/">Go Home</a>'''
                 % (users.create_login_url('/login'), users.create_login_url('/login')))
         else:
             email_address = user.nickname()
             cssi_user = User.get_by_id(user.user_id())
             signout_link_html = '<a href="%s">Sign Out</a>' %(users.create_logout_url('/login'))
             if cssi_user:
-                self.response.write('''Welcome %s %s (%s)! <br> You go to %s! <br> %s''' % (cssi_user.first_name, cssi_user.last_name, cssi_user.college, email_address, signout_link_html))
+                self.response.write('''Welcome %s %s (%s)! <br> You go to %s! <br> %s<br><br> <a href="/">Go Home</a>''' % (cssi_user.first_name, cssi_user.last_name, email_address, cssi_user.college, signout_link_html))
             else:
                 self.response.write('''
                     Please Sign Up %s!<br>
@@ -239,11 +240,13 @@ class LoginPage(webapp2.RequestHandler):
                     <br>
                     <input type="submit">
                     </form>
-                    <br>%s''' % (email_address, signout_link_html))
+                    <br>%s
+                    <br><br>
+                    <a href="/">Go Home</a>''' % (email_address, signout_link_html))
     def post(self):
         user = users.get_current_user()
         self.response.write('You are now logged in!')
-        self.response.write('''<a href="%s">Sign Out</a>'''% users.create_logout_url('/'))
+        self.response.write('''<a href="%s">Sign Out</a><br><br><a href="/">Go Home</a>'''% users.create_logout_url('/'))
         cssi_user = User(
             first_name=self.request.get('first_name'),
             last_name=self.request.get('last_name'),
@@ -533,6 +536,7 @@ class AdvicePage(webapp2.RequestHandler):
 
 class InputPage(webapp2.RequestHandler):
     def get(self):
+        suggestions = Advice.query().fetch()
         user = users.get_current_user()
         status = logged_in()
         link = users.create_logout_url('/login')
@@ -541,8 +545,52 @@ class InputPage(webapp2.RequestHandler):
             link = '/login'
         else:
             college = User.get_by_id(user.user_id()).college
-        temp_dict = {'status': status, 'link': link, 'college': college}
+        temp_dict = {'status': status, 'link': link, 'college': college, 'suggestion': suggestions}
         input_template = the_jinja_environment.get_template('templates/input.html')
+        if user:
+            self.response.write(input_template.render(temp_dict))
+            self.response.write('''
+            <div id = "suggestions">
+              <form method="post">
+                <h4>Have any book suggestions? Enter them here:</h4>
+                <p>Enter the book name and author name.</p>
+                <br>
+                <input type="text" name="book_name" placeholder="Enter book name">
+                <br>
+                <input type="text" name="author_name" placeholder="Enter author name">
+                <br>
+                <input type="submit">
+              </form>
+            <h4>View all suggestions
+            <a href="/other"> here!</a></h4>
+            </div>''')
+        else:
+            self.response.write(input_template.render(temp_dict))
+            self.response.write('''You are not logged in. Please log in to add a book suggestion. <br><a href='/login'>Sign in</a>''')
+    def post(self):
+        book = self.request.get('book_name')
+        author = self.request.get('author_name')
+        suggestion = Advice(book_name=book, author_name=author)
+        suggestion.put()
+        self.redirect('/input')
+
+class OtherPage(webapp2.RequestHandler):
+    def get(self):
+        suggestions = Advice.query().fetch()
+        user = users.get_current_user()
+        cssi_user = User.get_by_id(user.user_id())
+        first = cssi_user.first_name
+        last = cssi_user.last_name
+        college = cssi_user.college
+        status = logged_in()
+        link = users.create_logout_url('/login')
+        college = ""
+        if status == "Sign In":
+            link = '/login'
+        else:
+            college = User.get_by_id(user.user_id()).college
+        temp_dict = {'status': status, 'link': link, 'college': college, 'suggestion': suggestions, 'first_name': first, 'last_name': last,}
+        input_template = the_jinja_environment.get_template('templates/other.html')
         self.response.write(input_template.render(temp_dict))
 
 class AboutPage(webapp2.RequestHandler):
@@ -586,4 +634,5 @@ app = webapp2.WSGIApplication([
     ('/advice', AdvicePage),
     ('/input', InputPage),
     ('/about', AboutPage),
+    ('/other', OtherPage)
 ], debug=True)
