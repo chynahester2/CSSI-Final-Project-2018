@@ -44,6 +44,7 @@
 }
 
 body {
+  background: linear-gradient(lightslategray, lightblue) fixed;
   margin: 0;
   padding: 0;
 }
