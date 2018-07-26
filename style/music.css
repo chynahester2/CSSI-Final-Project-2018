@@ -30,22 +30,7 @@ div .buttonPanel {
   width: 50%;
   margin: 0 auto;
 }
-#music-button{
-  top: 100px;
-  left: 100px;
-}
-#apple-button {
-  top: 100px;
-  left:100px;
-}
-#peaceful-button{
-  top:100px;
-  left:100px;
-}
-#pump-up-button{
-  top:100px;
-  left:100px;
-}
+
 .btn {
   height: 300px;
   width: 300px;
