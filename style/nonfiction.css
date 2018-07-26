@@ -4,7 +4,7 @@ body {
   padding:0;
   background:linear-gradient(rgba(255, 255, 255, .2), rgba(255, 255, 255, .2)), url("http://papers.co/wallpaper/papers.co-vd04-globe-in-line-art-triangle-dark-pattern-35-3840x2160-4k-wallpaper.jpg") no-repeat center center fixed;
   background-size: cover;
-  opacity: .7;
+  opacity: .8;
 }
 
 .logo {
@@ -134,4 +134,23 @@ font-size: 30px;
   .header-right {
     float: none;
   }
+}
+
+#bookTable {
+  background-color: lightgray;
+  border-radius: 20px;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+img {
+  height: 150px;
+  width: 90px;
+}
+
+td {
+  width: 50%;
+  vertical-align: top;
 }
