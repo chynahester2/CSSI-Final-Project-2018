@@ -2,62 +2,82 @@ body {
   background-color: lightblue;
   margin:0;
   padding:0;
-  background:linear-gradient(rgba(255, 255, 255, .2), rgba(255, 255, 255, .2)), url("https://elsouvenir.com/wp-content/uploads/2017/06/caribe.jpg") no-repeat center center fixed;
+  background:linear-gradient(rgba(255, 255, 255, .2), rgba(255, 255, 255, .2)), url("http://papers.co/wallpaper/papers.co-vd04-globe-in-line-art-triangle-dark-pattern-35-3840x2160-4k-wallpaper.jpg") no-repeat center center fixed;
   background-size: cover;
-<<<<<<< HEAD
   opacity: .7;
-  margin: 0;
-  padding: 0;
-=======
-  opacity: .7;
->>>>>>> 0105618f6668c015703968c798b4cc9e6a397581
 }
+
 .logo {
   color: gray;
   text-align: center;
   font-family: 'Shrikhand', cursive;
   font-size: 10em;
 }
+
 div .buttonPanel {
-  background-color: lightblue; /* Green */
-  border: none;
-  color: white;
-  padding: 10px 15px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 12px;
-  justify-content: center;
-  align-items: center;
-  width: 50%;
-  margin: 0 auto;
+    background-color: lightpink; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin: 0 auto;
+}
+#nonfiction-button {
+  top: 100px;
+  left:100px;
+}
+#fiction-button {
   top: 100px;
   left: 100px;
-  right: 100px;
-  text-align: center;
-  justify-content: center;
-}
-
-.fade {
-  height: 300px;
-  width: 300px;
-  border-radius: 50%;
-  background:linear-gradient(rgba(255, 255, 255, .2), rgba(255, 255, 255, .2)), url("https://s-media-cache-ak0.pinimg.com/originals/78/9c/78/789c78fd05e6cd1fd0cfa4b80a64245e.jpg") no-repeat center center fixed;
-  font-size: 70px;
-  font-family: 'Shrikhand', cursive;
-  }
-  #meditate-button {
-  
   align-items: center;
-  justify-content: center;
 }
-  .fade
-{
-        opacity:0.5;
+#advice-button {
+ top: 100px;
+ left: 100px;
 }
-.fade:hover
-{
-        opacity:1;
+#input-button {
+  top:100px;
+  left:100px;
+}
+.hexagon {
+font-family: 'Abril Fatface', cursive;
+font-size: 30px;
+}
+.hexagon {
+	width: 300px;
+	height: 150px;
+  background-color: lightpink;
+	position: relative;
+  align-items: center;
+  display:inline-block;
+}
+.hexagon:before {
+	content: "";
+	position: absolute;
+	top: -25px;
+	left: 0;
+	width: 0;
+	height: 0;
+	border-left: 150px solid transparent;
+	border-right: 150px solid transparent;
+	border-bottom: 25px solid lightpink;
+}
+.hexagon:after {
+	content: "";
+	position: absolute;
+	bottom: -25px;
+	left: 0;
+	width: 0;
+	height: 0;
+	border-left: 150px solid transparent;
+	border-right: 150px solid transparent;
+	border-top: 25px solid lightpink;
 }
 
 /* Style the header with a grey background and some padding */
@@ -65,12 +85,6 @@ div .buttonPanel {
   overflow: hidden;
   background-color: #f1f1f1;
   padding: 20px 100px;
-}
-.grow:hover
-{
-        -webkit-transform: scale(1.3);
-        -ms-transform: scale(1.3);
-        transform: scale(1.3);
 }
 
 /* Style the header links */
@@ -109,7 +123,6 @@ div .buttonPanel {
 .header-right {
   float: right;
 }
-
 
 /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
 @media screen and (max-width: 500px) {

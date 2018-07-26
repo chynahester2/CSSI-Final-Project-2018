@@ -360,6 +360,26 @@ class AttractionsPage(webapp2.RequestHandler):
         attractions_template= the_jinja_environment.get_template('templates/attractions.html')
         self.response.write(attractions_template.render(temp_dict))
 
+class NonfictionPage(webapp2.RequestHandler):
+    def get(self):
+        nonfiction_template = the_jinja_environment.get_template('templates/nonfiction.html')
+        self.response.write(nonfiction_template.render())
+
+class FictionPage(webapp2.RequestHandler):
+    def get(self):
+        fiction_template = the_jinja_environment.get_template('templates/fiction.html')
+        self.response.write(fiction_template.render())
+
+class AdvicePage(webapp2.RequestHandler):
+    def get(self):
+        advice_template = the_jinja_environment.get_template('templates/advice.html')
+        self.response.write(advice_template.render())
+
+class InputPage(webapp2.RequestHandler):
+    def get(self):
+        input_template = the_jinja_environment.get_template('templates/input.html')
+        self.response.write(input_template.render())
+
 app = webapp2.WSGIApplication([
     ('/', WelcomePage),
     ('/discounts', DiscountPage),
@@ -381,5 +401,9 @@ app = webapp2.WSGIApplication([
     ('/events/festival', FestivalPage),
     ('/events/music', ConcertPage),
     ('/events/theater', TheaterPage),
-    ('/events/attractions', AttractionsPage)
+    ('/events/attractions', AttractionsPage),
+    ('/nonfiction', NonfictionPage),
+    ('/fiction', FictionPage),
+    ('/advice', AdvicePage),
+    ('/input', InputPage),
 ], debug=True)
