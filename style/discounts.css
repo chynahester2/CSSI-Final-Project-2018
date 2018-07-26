@@ -12,6 +12,7 @@ body {
   margin: 0;
   padding: 0;
   opacity: .7;
+  font-family: 'Abril Fatface', cursive;
 }
 .logo {
   color: gray;
