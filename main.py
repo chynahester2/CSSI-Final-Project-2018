@@ -363,10 +363,6 @@ class LaptopPage(webapp2.RequestHandler):
         laptop_template = the_jinja_environment.get_template('templates/laptop.html')
         self.response.write(laptop_template.render(temp_dict))
 
-class SpecificEventPage(webapp2.RequestHandler):
-    def get(self):
-        event_template = the_jinja_environment.get_template('templates/event.html')
-
 class MusicPage(webapp2.RequestHandler):
     def get(self):
         user = users.get_current_user()
