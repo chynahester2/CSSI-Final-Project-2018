@@ -14,7 +14,7 @@ body {
   font-size: 10em;
 }
 
-div .buttonPanel {
+.buttonPanel {
     background-color: lightpink; /* Green */
     border: none;
     color: white;
@@ -29,7 +29,17 @@ div .buttonPanel {
     margin: 0 auto;
 }
 
-div .text {
+.text {
+  background-color: lightgray;
+  border-radius: 20px;
+  position: absolute;
+  width: 75%;
+  top: 40%;
+  left: 5%;
+  padding-left: 100px;
+  padding-right: 100px;
+  display: flex;
+  justify-content: center;
   font-size: 20px;
 }
 /* Style the header with a grey background and some padding */
@@ -86,4 +96,28 @@ div .text {
   .header-right {
     float: none;
   }
+}
+
+ul.breadcrumb {
+    padding: 10px 16px;
+    list-style: none;
+    background-color: silver;
+    text-align: left;
+}
+ul.breadcrumb li {
+    display: inline;
+    font-size: 18px;
+}
+ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: black;
+    content: "/\00a0";
+}
+ul.breadcrumb li a {
+    color: #0275d8;
+    text-decoration: none;
+}
+ul.breadcrumb li a:hover {
+    color: #01447e;
+    text-decoration: underline;
 }

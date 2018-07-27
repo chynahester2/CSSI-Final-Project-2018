@@ -47,7 +47,7 @@
 <div id='suggestions'>
 <h4>Suggestions from the Community</h4>
 {% for advice in suggestion %}
-  <p>{{first_name}} {{last_name}} from {{college}} suggested {{advice.book_name}} written by {{advice.author_name}}.</p>
+  <p>{{advice.user_first}} {{advice.user_last}} from {{advice.user_college}} suggested {{advice.book_name}} written by {{advice.author_name}}.</p>
 {% endfor %}
 <p><a href="/input">Click</a> to go make your own book suggestion</p>
 </div>

@@ -63,6 +63,132 @@ class EventsPage(webapp2.RequestHandler):
                 <h3>%s</h3>
                 <p>This is the events page for %s</p>'''
                 % (college, college))
+            if college == "Georgia Tech":
+                self.response.write('''
+                <table>
+                <tr>
+                <td>
+                <h4>Robot Improv Circus</h4>
+                <ul style="list-style-type: none">
+                <li>Date &ndash; Friday, July 27, 2018</li>
+                <li>Time &ndash; 10:00AM - 4:00PM</li>
+                <li>Location &ndash; Tech Rec in the Student Center</li>
+                <li>Description &ndash; The Expressive Machinery Lab (formerly the ADAM Lab), directed by Brian Magerko, presents a preview of the Robot Improv Circus &ndash; a virtual reality installation where participants will collaborate with a robotic virtual stage partner to play the Props Game</li>
+                </ul>
+                </td>
+                </tr>
+                <tr>
+                <td>
+                <h4>End of Summer 2018 Term</h4>
+                <ul style="list-style-type: none">
+                <li>Date &ndash; Friday, August 3, 2018</li>
+                <li>Time &ndash; All Day</li>
+                <li>Location &ndash; Georgia Tech Campus</li>
+                <li>Description &ndash; End of Term - All Summer Sessions 2018</li>
+                </ul>
+                </td>
+                </tr>
+                </table>''')
+            elif college == "Georgia State University":
+                self.response.write('''
+                <table>
+                <tr>
+                <td>
+                <h4>Panther Band Camp</h4>
+                <ul style="list-style-type: none">
+                <li>Date &ndash; Monday, August 13 - Saturday, August 18, 2018</li>
+                <li>Time &ndash; All Day</li>
+                <li>Location &ndash; Helen M. Aderhold Learning</li>
+                <li>Description &ndash; The 2018-2019 Panther Band Auditions take place at the Atlanta campus. </li>
+                </ul>
+                </td>
+                </tr>
+                <tr>
+                <td>
+                <h4>Feed Your Senses featuring Pianist Kenneth Banks, Jr.</h4>
+                <ul style="list-style-type: none">
+                <li>Date &ndash; Wednesday, August 15, 2018</li>
+                <li>Time &ndash; 12:00PM - 1:00PM</li>
+                <li>Location &ndash; Rialto Center for the Arts</li>
+                <li>Description &ndash; The program features a different artist or speaker each month providing a casual and fun insider&#39;s look at their craft.</li>
+                </ul>
+                </td>
+                </tr>
+                <tr>
+                <td>
+                <h4>4th Annual Plays in a Day Theater Festival Showcase</h4>
+                <ul style="list-style-type: none">
+                <li>Date &ndash; Saturday, August 25, 2018</li>
+                <li>Time &ndash; 8:00PM - 10:00PM</li>
+                <li>Location &ndash; Marvin Cole Auditorium</li>
+                <li>Description &ndash; Students perform a set of plays that, 24 hours before, didn&#39;t exist. Within a single day, Students write, direct, rehearse, tech and perform completely new and original works of theatre.</li>
+                </ul>
+                </td>
+                </tr>
+                </table>''')
+            elif college == "Emory University":
+                self.response.write('''
+                <table>
+                <tr>
+                <td>
+                <h4>Emory Farmers Market</h4>
+                <ul style="list-style-type: none">
+                <li>Date &ndash; Tuesday, July 31, 2018</li>
+                <li>Time &ndash; 11:00AM - 3:00PM</li>
+                <li>Location &ndash; Cox Hall Bridge</li>
+                <li>Description &ndash; The Emory Farmers Market features fresh, seasonal local produce; artisanal bread; honey; other artisan products and baked goods; fair trade and organic coffee options; and diverse lunch options.</li>
+                </ul>
+                </td>
+                </tr>
+                <tr>
+                <td>
+                <h4>SURE Research Symposium</h4>
+                <ul style="list-style-type: none">
+                <li>Date &ndash; Thursday, August 2, 2018</li>
+                <li>Time &ndash; 10:00AM - 2:30PM</li>
+                <li>Location &ndash; Math/Science Center Lobby and Room N304</li>
+                <li>Description &ndash; The SURE Research Symposium provides the opportunity for the SURE undergraduate researchers who have completed full-time research for 10-weeks this summer to present their research for all to see.</li>
+                </ul>
+                </td>
+                </tr>
+                <tr>
+                <td>
+                <h4>End of Summer 2018 Term</h4>
+                <ul style="list-style-type: none">
+                <li>Date &ndash; Friday, August 10, 2018</li>
+                <li>Time &ndash; All Day</li>
+                <li>Location &ndash; Emory University Campus</li>
+                <li>Description &ndash; End of Term - All Summer Sessions 2018</li>
+                </ul>
+                </td>
+                </tr>
+                </table>''')
+            else:
+                self.response.write('''
+                <table>
+                <tr>
+                <td>
+                <h4>New Student Orientation</h4>
+                <ul style="list-style-type: none">
+                <li>Date &ndash; Wednesday, August 8 - Tuesday, August 14, 2018</li>
+                <li>Time &ndash; All Day</li>
+                <li>Location &ndash; Spelman College Campus</li>
+                <li>Description &ndash; Incoming freshman are formally introduced to Spelman College and tour the campus.</li>
+                </ul>
+                </td>
+                </tr>
+                <tr>
+                <td>
+                <h4>First Day of Classes</h4>
+                <ul style="list-style-type: none">
+                <li>Date &ndash; Wednesday, August 15, 2018</li>
+                <li>Time &ndash; All Day</li>
+                <li>Location &ndash; Spelman College Campus</li>
+                <li>Description &ndash; The start of the Fall Term.</li>
+                </ul>
+                </td>
+                </tr>
+                </table>''')
         else:
             self.response.write('''
                 <div class="tab">
@@ -245,15 +371,15 @@ class LoginPage(webapp2.RequestHandler):
                     <a href="/">Go Home</a>''' % (email_address, signout_link_html))
     def post(self):
         user = users.get_current_user()
-        self.response.write('You are now logged in!')
-        self.response.write('''<a href="%s">Sign Out</a><br><br><a href="/">Go Home</a>'''% users.create_logout_url('/'))
+        self.response.write('You are now logged in!<br>')
+        self.response.write('''<a href="%s">Sign Out</a><br><br>'''% users.create_logout_url('/'))
         cssi_user = User(
             first_name=self.request.get('first_name'),
             last_name=self.request.get('last_name'),
             college=self.request.get('college'),
             id=user.user_id())
         cssi_user.put()
-        self.response.write('Thanks for signing up, %s %s! You go to %s' % (cssi_user.first_name, cssi_user.last_name, cssi_user.college))
+        self.response.write('Thanks for signing up, %s %s!<br><a href="/">Go Home</a>' % (cssi_user.first_name, cssi_user.last_name))
 class BooksPage(webapp2.RequestHandler):
     def get(self):
         user = users.get_current_user()
@@ -570,7 +696,12 @@ class InputPage(webapp2.RequestHandler):
     def post(self):
         book = self.request.get('book_name')
         author = self.request.get('author_name')
-        suggestion = Advice(book_name=book, author_name=author)
+        user = users.get_current_user()
+        cssi_user = User.get_by_id(user.user_id())
+        first = cssi_user.first_name
+        last = cssi_user.last_name
+        college = cssi_user.college
+        suggestion = Advice(book_name=book, author_name=author, user_first=first, user_last=last, user_college=college)
         suggestion.put()
         self.redirect('/input')
 
@@ -589,7 +720,7 @@ class OtherPage(webapp2.RequestHandler):
             link = '/login'
         else:
             college = User.get_by_id(user.user_id()).college
-        temp_dict = {'status': status, 'link': link, 'college': college, 'suggestion': suggestions, 'first_name': first, 'last_name': last,}
+        temp_dict = {'status': status, 'link': link, 'college': college, 'suggestion': suggestions}
         input_template = the_jinja_environment.get_template('templates/other.html')
         self.response.write(input_template.render(temp_dict))
 
