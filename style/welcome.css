@@ -28,20 +28,20 @@ div .buttonPanel {
 }
 #discount-button {
   top: 100px;
-  left:100px;
+  left: 7%;
 }
 #localevents-button {
   top: 100px;
-  left: 100px;
+  left: 7%;
   align-items: center;
 }
 #books-button {
  top: 100px;
- left: 100px;
+ left: 7%;
 }
 #stressed-button {
   top:100px;
-  left:100px;
+  left:7%;
 }
 .hexagon {
 font-family: 'Abril Fatface', cursive;

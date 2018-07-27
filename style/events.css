@@ -61,7 +61,7 @@ img {
 }
 .photos {
   height: 233px;
-  width: 3550px;
+  width: 200%;
   margin-bottom: 80px;
   animation: bannermove 30s linear infinite;
   display: flex;
@@ -71,8 +71,8 @@ img {
 @keyframes bannermove {
   0% {margin-left: 0px}
   5% {margin-left: 0px}
-  45% {margin-left: -675px}
-  55% {margin-left: -675px}
+  45% {margin-left: -48%}
+  55% {margin-left: -48%}
   95% {margin-left: 0px}
   100% {margin-left: 0px}
 }

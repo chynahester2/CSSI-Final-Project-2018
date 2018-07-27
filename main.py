@@ -353,8 +353,8 @@ class LoginPage(webapp2.RequestHandler):
                 self.response.write('''
                     Please Sign Up %s!<br>
                     <form method="post" action="/login">
-                    <input type="text" name="first_name">
-                    <input type="text" name="last_name">
+                    <input type="text" name="first_name" placeholder="First Name">
+                    <input type="text" name="last_name" placeholder="Last Name">
                     <br>
                     <select name="college">
                     <option value="" disabled selected>Choose your college</option>
