@@ -72,3 +72,19 @@ ul.breadcrumb li a:hover {
     color: #01447e;
     text-decoration: underline;
 }
+table {
+  padding: 10px;
+}
+
+td {
+  padding: 10px;
+  padding-right: 40px;
+}
+
+#events {
+    padding-left: 40px;
+    padding-top: 20px;
+    background-color: lightgray;
+    border-radius: 20px;
+    opacity: 0.8;
+}
